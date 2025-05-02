@@ -1,8 +1,21 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
+import { useRef, useEffect } from "react"
 import CTASection from "@/components/cta-section"
 
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.error("Video autoplay failed:", error)
+      })
+    }
+  }, [])
+
   return (
     <div className="gradient-bg">
       <section className="max-w-7xl mx-auto px-4 pt-8 md:pt-16 pb-8 md:pb-12">
@@ -21,17 +34,11 @@ export default function Home() {
         </div>
 
         <div className="mt-8 md:mt-12 relative max-w-2xl mx-auto">
-          <div className="bg-white rounded-lg border shadow-lg overflow-hidden p-2 md:p-4">
-            <div className="flex items-center justify-center">
-              <Image
-                src="/images/character-back.png"
-                alt="Octa's AI interface mockup"
-                width={400}
-                height={300}
-                className="w-full h-auto"
-                priority
-              />
-            </div>
+          <div className="flex items-center justify-center">
+            <video ref={videoRef} className="w-full h-auto rounded-xl" autoPlay muted loop playsInline>
+              <source src="/videos/octa-home-page.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="absolute -bottom-2 md:-bottom-4 -right-2 md:-right-4 w-8 md:w-16 h-8 md:h-16 bg-yellow-300 rounded-full opacity-50"></div>
           <div className="absolute -top-2 md:-top-4 -left-2 md:-left-4 w-6 md:w-12 h-6 md:h-12 bg-blue-300 rounded-full opacity-50"></div>

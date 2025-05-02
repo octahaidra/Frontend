@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 
@@ -14,10 +15,16 @@ export default function Header() {
   return (
     <header className="relative z-50 bg-white/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-purple-500 rounded-md rotate-45"></div>
-            <span className="font-medium">Octa's</span>
+        {/* Logo */}
+        <div className="flex items-center">
+          <Link href="/">
+            <Image
+              src="/images/octahaidra-logo.png"
+              alt="Octahaidra Logo"
+              width={60}
+              height={60}
+              className="w-12 h-12"
+            />
           </Link>
         </div>
 

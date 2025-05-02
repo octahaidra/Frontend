@@ -6,6 +6,7 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./registry/**/*.{js,ts,jsx,tsx,mdx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -73,6 +74,9 @@ const config: Config = {
           900: "#5b21b6",
         },
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -104,6 +108,14 @@ const config: Config = {
             opacity: "1",
             transform: "translateY(0)",
           },
+        },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        marqueeReverse: {
+          from: { transform: "translateX(calc(-100% - var(--gap)))" },
+          to: { transform: "translateX(0)" },
         },
       },
       animation: {

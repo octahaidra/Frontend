@@ -1,5 +1,7 @@
-import Image from "next/image"
+"use client"
+
 import CTASection from "@/components/cta-section"
+import { MarqueeDemo } from "@/components/marquee-demo"
 
 export default function SolutionsPage() {
   return (
@@ -13,21 +15,8 @@ export default function SolutionsPage() {
           </p>
         </div>
 
-        <div className="mt-12 relative max-w-2xl mx-auto">
-          <div className="bg-white rounded-lg border shadow-lg overflow-hidden p-4">
-            <div className="flex items-center justify-center">
-              <Image
-                src="/images/purple-octahedron.png"
-                alt="Octa's AI interface mockup"
-                width={400}
-                height={300}
-                className="w-auto h-auto"
-                priority
-              />
-            </div>
-          </div>
-          <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-purple-300 rounded-full opacity-50"></div>
-          <div className="absolute -top-4 -left-4 w-12 h-12 bg-purple-300 rounded-full opacity-50"></div>
+        <div className="mt-12 relative max-w-5xl mx-auto">
+          <MarqueeDemo />
         </div>
       </section>
 

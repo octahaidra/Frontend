@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import { FlickeringGridDemo } from "@/components/flickering-grid-demo"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -21,9 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <div className="relative min-h-screen">
+          <FlickeringGridDemo />
+          <Header />
+          <main className="relative z-10">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   )

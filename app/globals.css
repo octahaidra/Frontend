@@ -105,10 +105,14 @@ body {
 
 .gradient-bg {
   background: linear-gradient(135deg, #f3e8ff 0%, #fff 100%);
+  position: relative;
+  z-index: 1;
 }
 
 .cta-section {
   background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%);
+  position: relative;
+  z-index: 1;
 }
 
 .feature-icon {
@@ -170,4 +174,11 @@ p {
   padding-right: clamp(1rem, 3vw, 2rem);
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Gradient utilities */
+@layer utilities {
+  .bg-gradient-radial {
+    background-image: radial-gradient(var(--tw-gradient-stops));
+  }
 }

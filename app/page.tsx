@@ -40,8 +40,9 @@ export default function Home() {
               Your browser does not support the video tag.
             </video>
           </div>
-          <div className="absolute -bottom-2 md:-bottom-4 -right-2 md:-right-4 w-8 md:w-16 h-8 md:h-16 bg-yellow-300 rounded-full opacity-50"></div>
+          {/*<div className="absolute -bottom-2 md:-bottom-4 -right-2 md:-right-4 w-8 md:w-16 h-8 md:h-16 bg-yellow-300 rounded-full opacity-50"></div>
           <div className="absolute -top-2 md:-top-4 -left-2 md:-left-4 w-6 md:w-12 h-6 md:h-12 bg-blue-300 rounded-full opacity-50"></div>
+          */}
         </div>
       </section>
 

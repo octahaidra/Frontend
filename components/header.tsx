@@ -21,9 +21,9 @@ export default function Header() {
             <Image
               src="/images/octahaidra-logo.png"
               alt="Octahaidra Logo"
-              width={60}
-              height={60}
-              className="w-12 h-12"
+              width={100}
+              height={100}
+              className="w-26 h-26"
             />
           </Link>
         </div>

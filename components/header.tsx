@@ -54,7 +54,7 @@ export default function Header() {
           </Link>
           <Link
             href="/signup"
-            className="text-sm bg-purple-600 text-white px-4 py-1.5 rounded-full hover:bg-purple-700 transition-colors"
+            className="inline-flex items-center justify-center bg-gradient-to-tl from-purple-400 to-purple-800 text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full hover:from-purple-700 hover:to-purple-500 transition-colors"
           >
             Sign up
           </Link>
@@ -119,7 +119,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/signup"
-                className="flex-1 text-center py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors"
+                className="flex-1 text-center py-1 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Sign up

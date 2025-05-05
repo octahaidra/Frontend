@@ -23,7 +23,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="relative min-h-screen">
-          {/*<FlickeringGridDemo />*/}
           <Header />
           <main className="relative z-10">{children}</main>
           <Footer />

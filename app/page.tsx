@@ -4,6 +4,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRef, useEffect } from "react"
 import CTASection from "@/components/cta-section"
+import SplashCursor from '@/components/SplashCursor'
+import ShinyText from '@/components/ShinyText';
+
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -27,7 +30,8 @@ export default function Home() {
           </p>
           <Link
             href="/signup"
-            className="inline-flex items-center justify-center bg-purple-600 text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full hover:bg-purple-700 transition-colors"
+            className="inline-flex items-center justify-center bg-gradient-to-tl from-purple-400 to-purple-800 text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full hover:from-purple-700 hover:to-purple-500 transition-colors"
+
           >
             Get Started
           </Link>
@@ -136,7 +140,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-purple-600 text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full hover:bg-purple-700 transition-colors"
+              className="inline-flex items-center justify-center bg-gradient-to-tl from-purple-400 to-purple-800 text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full hover:from-purple-700 hover:to-purple-500 transition-colors"
             >
               Contact Us
             </Link>
